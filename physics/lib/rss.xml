@@ -1,0 +1,14 @@
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Physics]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib\media\favicon.png</url><title>Physics</title><link/></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Sun, 21 Apr 2024 13:07:22 GMT</lastBuildDate><atom:link href="lib\rss.xml" rel="self" type="application/rss+xml"/><pubDate>Sun, 21 Apr 2024 13:07:21 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[相速度与群速度]]></title><description><![CDATA[ 
+ ]]></description><link>Content\相速度与群速度.html</link><guid isPermaLink="false">Content/相速度与群速度.md</guid><pubDate>Sun, 21 Apr 2024 05:22:43 GMT</pubDate></item><item><title><![CDATA[1 基础概念]]></title><description><![CDATA[<a class="tag" href="?query=tag:Concept/折射率" style="background-color: rgb(4, 108, 116); color: white; font-weight: 700; border: none; border-radius: 1em; padding: 0.2em 0.5em;">#Concept/折射率</a> 
+ <br><a data-href="2024-04-21" href="2024-04-21" class="internal-link" target="_self" rel="noopener">2024-04-21</a><br><br><br><a href=".?query=tag:Concept\折射率" class="tag" target="_blank" rel="noopener">#Concept/折射率</a> 折射率（Refractive Index）：光在真空中的速度（  )  与其进入介质后的<a data-tooltip-position="top" aria-label="相速度与群速度" data-href="相速度与群速度" href="Content\相速度与群速度.html" class="internal-link" target="_self" rel="noopener">相速度</a>（ ）之比。<br>
+<br>Note
+<br>折射率一般与频率有关，即，因为一般情况下。
+<br>已知介质折射率n，则介质中相速度
+<br><br>考虑一束单色平面波，根据Maxwell方程中的（，）可以证明其满足Helmoltz 方程    。可以得到波数和频率的关系：<br>
+	<br><br>Kinematic properties:<br>
+1. 反射角等于入射角<br>
+2. Snell定理：<br>证明思路不同介质中电磁波的保持一致，k根据关系在不同介质中不同，而界面处的电磁波相位保持一致，即:<br>
+点成展开成角度关系即可得到反射与折射定理<br>Dynamic properties:<br>
+折射与反射电磁波强度与入射电磁波的强度关系，与偏振方向有关。]]></description><link>Content\Refractive.html</link><guid isPermaLink="false">Content/Refractive.md</guid><pubDate>Sun, 21 Apr 2024 12:21:56 GMT</pubDate></item><item><title><![CDATA[Physics]]></title><description><![CDATA[ 
+ <br><br><br>1 <a data-tooltip-position="top" aria-label="Refractive" data-href="Refractive" href="Content\Refractive.html" class="internal-link" target="_self" rel="noopener">折射率</a><br>
+2  <a data-tooltip-position="top" aria-label="相速度与群速度" data-href="相速度与群速度" href="Content\相速度与群速度.html" class="internal-link" target="_self" rel="noopener">群速度与相速度</a>]]></description><link>Home.html</link><guid isPermaLink="false">Home.md</guid><pubDate>Sun, 21 Apr 2024 12:58:19 GMT</pubDate></item></channel></rss>
