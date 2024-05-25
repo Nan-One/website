@@ -17,6 +17,7 @@ async def root():
         content=open("Home.html", "r", encoding="utf-8").read()
     )
 
+
 #Refractive.html
 @app.get("/Content/Refractive.html")
 async def Refractive_html():
