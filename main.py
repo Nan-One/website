@@ -46,5 +46,5 @@ async def Bessel_html():
 @app.get("/2024_5_1.html")
 async def Bessel_html():
     return HTMLResponse(
-        content=open(r"HTMLs\2024_5_1.html", "r", encoding="utf-8").read()
+        content=open(r"HTMLs/2024_5_1.html", "r", encoding="utf-8").read()
     )
