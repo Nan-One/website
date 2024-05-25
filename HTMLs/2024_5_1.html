@@ -1,882 +1,684 @@
-<html>
-
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>2024年五一旅游记录</title>
-	<style>
-		/* cspell:disable-file */
-		/* webkit printing magic: print all background colors */
-		html {
-			-webkit-print-color-adjust: exact;
-		}
-
-		* {
-			box-sizing: border-box;
-			-webkit-print-color-adjust: exact;
-		}
-
-		html,
-		body {
-			margin: 0;
-			padding: 0;
-		}
-
-		@media only screen {
-			body {
-				margin: 2em auto;
-				max-width: 900px;
-				color: rgb(55, 53, 47);
-			}
-		}
-
-		body {
-			line-height: 1.5;
-			white-space: pre-wrap;
-		}
-
-		a,
-		a.visited {
-			color: inherit;
-			text-decoration: underline;
-		}
-
-		.pdf-relative-link-path {
-			font-size: 80%;
-			color: #444;
-		}
-
-		h1,
-		h2,
-		h3 {
-			letter-spacing: -0.01em;
-			line-height: 1.2;
-			font-weight: 600;
-			margin-bottom: 0;
-		}
-
-		.page-title {
-			font-size: 2.5rem;
-			font-weight: 700;
-			margin-top: 0;
-			margin-bottom: 0.75em;
-		}
-
-		h1 {
-			font-size: 1.875rem;
-			margin-top: 1.875rem;
-		}
-
-		h2 {
-			font-size: 1.5rem;
-			margin-top: 1.5rem;
-		}
-
-		h3 {
-			font-size: 1.25rem;
-			margin-top: 1.25rem;
-		}
-
-		.source {
-			border: 1px solid #ddd;
-			border-radius: 3px;
-			padding: 1.5em;
-			word-break: break-all;
-		}
-
-		.callout {
-			border-radius: 3px;
-			padding: 1rem;
-		}
-
-		figure {
-			margin: 1.25em 0;
-			page-break-inside: avoid;
-		}
-
-		figcaption {
-			opacity: 0.5;
-			font-size: 85%;
-			margin-top: 0.5em;
-		}
-
-		mark {
-			background-color: transparent;
-		}
-
-		.indented {
-			padding-left: 1.5em;
-		}
-
-		hr {
-			background: transparent;
-			display: block;
-			width: 100%;
-			height: 1px;
-			visibility: visible;
-			border: none;
-			border-bottom: 1px solid rgba(55, 53, 47, 0.09);
-		}
-
-		img {
-			max-width: 100%;
-		}
-
-		@media only print {
-			img {
-				max-height: 100vh;
-				object-fit: contain;
-			}
-		}
-
-		@page {
-			margin: 1in;
-		}
-
-		.collection-content {
-			font-size: 0.875rem;
-		}
-
-		.column-list {
-			display: flex;
-			justify-content: space-between;
-		}
-
-		.column {
-			padding: 0 1em;
-		}
-
-		.column:first-child {
-			padding-left: 0;
-		}
-
-		.column:last-child {
-			padding-right: 0;
-		}
-
-		.table_of_contents-item {
-			display: block;
-			font-size: 0.875rem;
-			line-height: 1.3;
-			padding: 0.125rem;
-		}
-
-		.table_of_contents-indent-1 {
-			margin-left: 1.5rem;
-		}
-
-		.table_of_contents-indent-2 {
-			margin-left: 3rem;
-		}
-
-		.table_of_contents-indent-3 {
-			margin-left: 4.5rem;
-		}
-
-		.table_of_contents-link {
-			text-decoration: none;
-			opacity: 0.7;
-			border-bottom: 1px solid rgba(55, 53, 47, 0.18);
-		}
-
-		table,
-		th,
-		td {
-			border: 1px solid rgba(55, 53, 47, 0.09);
-			border-collapse: collapse;
-		}
-
-		table {
-			border-left: none;
-			border-right: none;
-		}
-
-		th,
-		td {
-			font-weight: normal;
-			padding: 0.25em 0.5em;
-			line-height: 1.5;
-			min-height: 1.5em;
-			text-align: left;
-		}
-
-		th {
-			color: rgba(55, 53, 47, 0.6);
-		}
-
-		ol,
-		ul {
-			margin: 0;
-			margin-block-start: 0.6em;
-			margin-block-end: 0.6em;
-		}
-
-		li>ol:first-child,
-		li>ul:first-child {
-			margin-block-start: 0.6em;
-		}
-
-		ul>li {
-			list-style: disc;
-		}
-
-		ul.to-do-list {
-			padding-inline-start: 0;
-		}
-
-		ul.to-do-list>li {
-			list-style: none;
-		}
-
-		.to-do-children-checked {
-			text-decoration: line-through;
-			opacity: 0.375;
-		}
-
-		ul.toggle>li {
-			list-style: none;
-		}
-
-		ul {
-			padding-inline-start: 1.7em;
-		}
-
-		ul>li {
-			padding-left: 0.1em;
-		}
-
-		ol {
-			padding-inline-start: 1.6em;
-		}
-
-		ol>li {
-			padding-left: 0.2em;
-		}
-
-		.mono ol {
-			padding-inline-start: 2em;
-		}
-
-		.mono ol>li {
-			text-indent: -0.4em;
-		}
-
-		.toggle {
-			padding-inline-start: 0em;
-			list-style-type: none;
-		}
-
-		/* Indent toggle children */
-		.toggle>li>details {
-			padding-left: 1.7em;
-		}
-
-		.toggle>li>details>summary {
-			margin-left: -1.1em;
-		}
-
-		.selected-value {
-			display: inline-block;
-			padding: 0 0.5em;
-			background: rgba(206, 205, 202, 0.5);
-			border-radius: 3px;
-			margin-right: 0.5em;
-			margin-top: 0.3em;
-			margin-bottom: 0.3em;
-			white-space: nowrap;
-		}
-
-		.collection-title {
-			display: inline-block;
-			margin-right: 1em;
-		}
-
-		.page-description {
-			margin-bottom: 2em;
-		}
-
-		.simple-table {
-			margin-top: 1em;
-			font-size: 0.875rem;
-			empty-cells: show;
-		}
-
-		.simple-table td {
-			height: 29px;
-			min-width: 120px;
-		}
-
-		.simple-table th {
-			height: 29px;
-			min-width: 120px;
-		}
-
-		.simple-table-header-color {
-			background: rgb(247, 246, 243);
-			color: black;
-		}
-
-		.simple-table-header {
-			font-weight: 500;
-		}
-
-		time {
-			opacity: 0.5;
-		}
-
-		.icon {
-			display: inline-block;
-			max-width: 1.2em;
-			max-height: 1.2em;
-			text-decoration: none;
-			vertical-align: text-bottom;
-			margin-right: 0.5em;
-		}
-
-		img.icon {
-			border-radius: 3px;
-		}
-
-		.user-icon {
-			width: 1.5em;
-			height: 1.5em;
-			border-radius: 100%;
-			margin-right: 0.5rem;
-		}
-
-		.user-icon-inner {
-			font-size: 0.8em;
-		}
-
-		.text-icon {
-			border: 1px solid #000;
-			text-align: center;
-		}
-
-		.page-cover-image {
-			display: block;
-			object-fit: cover;
-			width: 100%;
-			max-height: 30vh;
-		}
-
-		.page-header-icon {
-			font-size: 3rem;
-			margin-bottom: 1rem;
-		}
-
-		.page-header-icon-with-cover {
-			margin-top: -0.72em;
-			margin-left: 0.07em;
-		}
-
-		.page-header-icon img {
-			border-radius: 3px;
-		}
-
-		.link-to-page {
-			margin: 1em 0;
-			padding: 0;
-			border: none;
-			font-weight: 500;
-		}
-
-		p>.user {
-			opacity: 0.5;
-		}
-
-		td>.user,
-		td>time {
-			white-space: nowrap;
-		}
-
-		input[type="checkbox"] {
-			transform: scale(1.5);
-			margin-right: 0.6em;
-			vertical-align: middle;
-		}
-
-		p {
-			margin-top: 0.5em;
-			margin-bottom: 0.5em;
-		}
-
-		.image {
-			border: none;
-			margin: 1.5em 0;
-			padding: 0;
-			border-radius: 0;
-			text-align: center;
-		}
-
-		.code,
-		code {
-			background: rgba(135, 131, 120, 0.15);
-			border-radius: 3px;
-			padding: 0.2em 0.4em;
-			border-radius: 3px;
-			font-size: 85%;
-			tab-size: 2;
-		}
-
-		code {
-			color: #eb5757;
-		}
-
-		.code {
-			padding: 1.5em 1em;
-		}
-
-		.code-wrap {
-			white-space: pre-wrap;
-			word-break: break-all;
-		}
-
-		.code>code {
-			background: none;
-			padding: 0;
-			font-size: 100%;
-			color: inherit;
-		}
-
-		blockquote {
-			font-size: 1.25em;
-			margin: 1em 0;
-			padding-left: 1em;
-			border-left: 3px solid rgb(55, 53, 47);
-		}
-
-		.bookmark {
-			text-decoration: none;
-			max-height: 8em;
-			padding: 0;
-			display: flex;
-			width: 100%;
-			align-items: stretch;
-		}
-
-		.bookmark-title {
-			font-size: 0.85em;
-			overflow: hidden;
-			text-overflow: ellipsis;
-			height: 1.75em;
-			white-space: nowrap;
-		}
-
-		.bookmark-text {
-			display: flex;
-			flex-direction: column;
-		}
-
-		.bookmark-info {
-			flex: 4 1 180px;
-			padding: 12px 14px 14px;
-			display: flex;
-			flex-direction: column;
-			justify-content: space-between;
-		}
-
-		.bookmark-image {
-			width: 33%;
-			flex: 1 1 180px;
-			display: block;
-			position: relative;
-			object-fit: cover;
-			border-radius: 1px;
-		}
-
-		.bookmark-description {
-			color: rgba(55, 53, 47, 0.6);
-			font-size: 0.75em;
-			overflow: hidden;
-			max-height: 4.5em;
-			word-break: break-word;
-		}
-
-		.bookmark-href {
-			font-size: 0.75em;
-			margin-top: 0.25em;
-		}
-
-		.sans {
-			font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
-		}
-
-		.code {
-			font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace;
-		}
-
-		.serif {
-			font-family: Lyon-Text, Georgia, ui-serif, serif;
-		}
-
-		.mono {
-			font-family: iawriter-mono, Nitti, Menlo, Courier, monospace;
-		}
-
-		.pdf .sans {
-			font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP';
-		}
-
-		.pdf:lang(zh-CN) .sans {
-			font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC';
-		}
-
-		.pdf:lang(zh-TW) .sans {
-			font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC';
-		}
-
-		.pdf:lang(ko-KR) .sans {
-			font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR';
-		}
-
-		.pdf .code {
-			font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP';
-		}
-
-		.pdf:lang(zh-CN) .code {
-			font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC';
-		}
-
-		.pdf:lang(zh-TW) .code {
-			font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC';
-		}
-
-		.pdf:lang(ko-KR) .code {
-			font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR';
-		}
-
-		.pdf .serif {
-			font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP';
-		}
-
-		.pdf:lang(zh-CN) .serif {
-			font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC';
-		}
-
-		.pdf:lang(zh-TW) .serif {
-			font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC';
-		}
-
-		.pdf:lang(ko-KR) .serif {
-			font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR';
-		}
-
-		.pdf .mono {
-			font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP';
-		}
-
-		.pdf:lang(zh-CN) .mono {
-			font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC';
-		}
-
-		.pdf:lang(zh-TW) .mono {
-			font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC';
-		}
-
-		.pdf:lang(ko-KR) .mono {
-			font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR';
-		}
-
-		.highlight-default {
-			color: rgba(55, 53, 47, 1);
-		}
-
-		.highlight-gray {
-			color: rgba(120, 119, 116, 1);
-			fill: rgba(120, 119, 116, 1);
-		}
-
-		.highlight-brown {
-			color: rgba(159, 107, 83, 1);
-			fill: rgba(159, 107, 83, 1);
-		}
-
-		.highlight-orange {
-			color: rgba(217, 115, 13, 1);
-			fill: rgba(217, 115, 13, 1);
-		}
-
-		.highlight-yellow {
-			color: rgba(203, 145, 47, 1);
-			fill: rgba(203, 145, 47, 1);
-		}
-
-		.highlight-teal {
-			color: rgba(68, 131, 97, 1);
-			fill: rgba(68, 131, 97, 1);
-		}
-
-		.highlight-blue {
-			color: rgba(51, 126, 169, 1);
-			fill: rgba(51, 126, 169, 1);
-		}
-
-		.highlight-purple {
-			color: rgba(144, 101, 176, 1);
-			fill: rgba(144, 101, 176, 1);
-		}
-
-		.highlight-pink {
-			color: rgba(193, 76, 138, 1);
-			fill: rgba(193, 76, 138, 1);
-		}
-
-		.highlight-red {
-			color: rgba(212, 76, 71, 1);
-			fill: rgba(212, 76, 71, 1);
-		}
-
-		.highlight-gray_background {
-			background: rgba(241, 241, 239, 1);
-		}
-
-		.highlight-brown_background {
-			background: rgba(244, 238, 238, 1);
-		}
-
-		.highlight-orange_background {
-			background: rgba(251, 236, 221, 1);
-		}
-
-		.highlight-yellow_background {
-			background: rgba(251, 243, 219, 1);
-		}
-
-		.highlight-teal_background {
-			background: rgba(237, 243, 236, 1);
-		}
-
-		.highlight-blue_background {
-			background: rgba(231, 243, 248, 1);
-		}
-
-		.highlight-purple_background {
-			background: rgba(244, 240, 247, 0.8);
-		}
-
-		.highlight-pink_background {
-			background: rgba(249, 238, 243, 0.8);
-		}
-
-		.highlight-red_background {
-			background: rgba(253, 235, 236, 1);
-		}
-
-		.block-color-default {
-			color: inherit;
-			fill: inherit;
-		}
-
-		.block-color-gray {
-			color: rgba(120, 119, 116, 1);
-			fill: rgba(120, 119, 116, 1);
-		}
-
-		.block-color-brown {
-			color: rgba(159, 107, 83, 1);
-			fill: rgba(159, 107, 83, 1);
-		}
-
-		.block-color-orange {
-			color: rgba(217, 115, 13, 1);
-			fill: rgba(217, 115, 13, 1);
-		}
-
-		.block-color-yellow {
-			color: rgba(203, 145, 47, 1);
-			fill: rgba(203, 145, 47, 1);
-		}
-
-		.block-color-teal {
-			color: rgba(68, 131, 97, 1);
-			fill: rgba(68, 131, 97, 1);
-		}
-
-		.block-color-blue {
-			color: rgba(51, 126, 169, 1);
-			fill: rgba(51, 126, 169, 1);
-		}
-
-		.block-color-purple {
-			color: rgba(144, 101, 176, 1);
-			fill: rgba(144, 101, 176, 1);
-		}
-
-		.block-color-pink {
-			color: rgba(193, 76, 138, 1);
-			fill: rgba(193, 76, 138, 1);
-		}
-
-		.block-color-red {
-			color: rgba(212, 76, 71, 1);
-			fill: rgba(212, 76, 71, 1);
-		}
-
-		.block-color-gray_background {
-			background: rgba(241, 241, 239, 1);
-		}
-
-		.block-color-brown_background {
-			background: rgba(244, 238, 238, 1);
-		}
-
-		.block-color-orange_background {
-			background: rgba(251, 236, 221, 1);
-		}
-
-		.block-color-yellow_background {
-			background: rgba(251, 243, 219, 1);
-		}
-
-		.block-color-teal_background {
-			background: rgba(237, 243, 236, 1);
-		}
-
-		.block-color-blue_background {
-			background: rgba(231, 243, 248, 1);
-		}
-
-		.block-color-purple_background {
-			background: rgba(244, 240, 247, 0.8);
-		}
-
-		.block-color-pink_background {
-			background: rgba(249, 238, 243, 0.8);
-		}
-
-		.block-color-red_background {
-			background: rgba(253, 235, 236, 1);
-		}
-
-		.select-value-color-uiBlue {
-			background-color: rgba(35, 131, 226, .07);
-		}
-
-		.select-value-color-pink {
-			background-color: rgba(245, 224, 233, 1);
-		}
-
-		.select-value-color-purple {
-			background-color: rgba(232, 222, 238, 1);
-		}
-
-		.select-value-color-green {
-			background-color: rgba(219, 237, 219, 1);
-		}
-
-		.select-value-color-gray {
-			background-color: rgba(227, 226, 224, 1);
-		}
-
-		.select-value-color-transparentGray {
-			background-color: rgba(227, 226, 224, 0);
-		}
-
-		.select-value-color-translucentGray {
-			background-color: rgba(255, 255, 255, 0.0375);
-		}
-
-		.select-value-color-orange {
-			background-color: rgba(250, 222, 201, 1);
-		}
-
-		.select-value-color-brown {
-			background-color: rgba(238, 224, 218, 1);
-		}
-
-		.select-value-color-red {
-			background-color: rgba(255, 226, 221, 1);
-		}
-
-		.select-value-color-yellow {
-			background-color: rgba(253, 236, 200, 1);
-		}
-
-		.select-value-color-blue {
-			background-color: rgba(211, 229, 239, 1);
-		}
-
-		.select-value-color-pageGlass {
-			background-color: undefined;
-		}
-
-		.select-value-color-washGlass {
-			background-color: undefined;
-		}
-
-		.checkbox {
-			display: inline-flex;
-			vertical-align: text-bottom;
-			width: 16;
-			height: 16;
-			background-size: 16px;
-			margin-left: 2px;
-			margin-right: 5px;
-		}
-
-		.checkbox-on {
-			background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
-		}
-
-		.checkbox-off {
-			background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
-		}
-	</style>
-</head>
-
-<body>
-	<article id="e9192a6e-0827-44bd-89bd-82e3a819e453" class="page sans">
-		<header>
-			<h1 class="page-title">2024年五一旅游记录</h1>
-			<p class="page-description"></p>
-		</header>
-		<div class="page-body">
-			<p id="faaaca16-6aff-4572-a7aa-59bda294864f" class="">
-			</p>
-			<h2 id="7a652dbd-1317-45fa-b918-b5a17ae15ee3" class="">1 波折的启程</h2>
-			<hr id="abe9b076-6d46-43a2-8722-b9fc5113f55f" />
-			<p id="09e5c314-bcd5-476d-b220-31abee5a0d27" class="">
-				今年五一计划是和兰一块去找个游游逛逛，但是去哪玩一直没定好。因为我在上海，兰在兴义，五一假期只有五天，我们不希望在出行上花费太多时间，多留些时间去玩。出于这个原因，我们排除了重庆，北海这些地方。后面兰跟我说，五一期间恰逢黔西南州州庆，所以她们可以多两天假期，她可以
-			</p>
-			<p id="52719e2d-d752-43a6-b764-2c07e2a96680" class="">
-				29号下班之后出发，6号回去。于是我们决定还是来上海玩，这样可以在上海周边玩五天。去年国庆期间我们已经逛了上海的一些地方了，这次打算玩的轻松一些，随便逛逛吃吃，不要玩的太累，享受下慢悠悠的生活节奏。</p>
-			<p id="32527735-5bc9-44d9-9cb6-b057a21afeeb" class="">
-				理想是丰满的，现实往往则充满波折。时间来到四月二十九号，兴义没雨但风却不太平静，天气预报中南方大部有雨，长沙下了一天暴雨以至于南站甚至都漏雨了。只是29号早上的我们还没有意识到这会给启程带来什么意外。按计划，29号周一，兰下午三点十分下课之后，打车去兴义万峰林的机场赶17：35-18：30的飞机，然后坐20：30-23：05的飞机。
-			</p>
-			<h3 id="ea69f1a8-a3ed-4f78-a7be-a5994f398f6a" class="">第一折：突然的延误</h3>
-			<p id="0576be90-f7e0-4c97-9983-e6c57ccc3ff4" class="">但是29号11：20，兰突然收到短信通知，她的航班变动到了20：00-20：55。</p>
-			<figure id="7a9cc6ef-3413-4775-babe-994f56baf8aa" class="image"><a href="https://sm.ms/image/UG4tzulbdJqvDkE" target="_blank">
-				<img src="https://s2.loli.net/2024/05/25/UG4tzulbdJqvDkE.jpg" ></a>
-			</figure>
-			<p id="de8b9892-4b05-42a8-ba63-f77d47d60248" class="">
-				按照这个时间，肯定无法赶上20：30贵阳飞往上海的飞机。于是兰赶快退了这趟晚点的飞机，转订了15：00的兴义飞贵阳的飞机。但是这样她就没法上下午的那节课了，没办法，她只好找了同事帮忙代一节课，然后下午两点出发去机场。但是事情会那么轻松解决么？
-			</p>
-			<h3 id="ba8214f8-15f3-473b-9e7e-ff9df9f611da" class="">第二折：不确定的起飞时间</h3>
-			<p id="e591351f-d3ba-4d10-9f46-a93d03577f9c" class="">15：20登机，但是在机场等待的兰迟迟没听到广播，我让她去看看电子屏看看有没有延误的通知。结果她发现了这个：
-			</p>
-			<figure id="1c05b22c-4834-49e9-8db9-f2fe21998737" class="image"><a href="https://sm.ms/image/sQZKTg8w6xRqzWp" target="_blank"><img src="https://s2.loli.net/2024/05/25/sQZKTg8w6xRqzWp.jpg" ></a>
-			</figure>
-			<p id="a5d93df0-63dd-4ffa-ada8-33ed6eae8488" class="">
-				且不说这个展板在2024年的机场显得有些太不专业了，起飞时间待定，无疑对于要赶下一趟飞机的人来说是一记痛击。时间已经到了下午四点，继续等待充满了太多不确定性。兰决定不坐飞机去贵阳了，转坐顺风车去，理论上说，四点出发，考虑到接人送人，八点之前到贵阳机场时间上是紧迫的。但是小兰提醒我，小罗和小曹他们此时应该也出发了，让我去问问他们什么情况了。询问过后，发现由于贵阳天气也很恶劣，暴雨不断，大部分飞机都延误了。也就是说如果顺风车开的快一些的话，还是有机会赶上延误的飞机的，这是唯一的好消息了。但是后面的经历显示，把这当成好消息还是太乐观了。
-			</p>
-			<h3 id="4cdada4d-7c24-4c72-bc2a-afde3e4cc9ce" class="">第三折：延误的飞机与缓慢的顺风车</h3>
-			<p id="10fd8ed2-d4c9-42e5-bf5b-a34452acffc9" class="">
-				正常来说，从兴义到贵阳顺风车，最多四小时就能到。但是实际上这辆车四点出发，直到九点半才到机场。好在飞机延误了，原定八点半起飞的飞机，到十点都还没有开始检票。后来机场工作人员告诉乘客，这辆飞机延误到凌晨两点，让旅客们先去酒店休息。时间到十点半，兰坐机场提供的大巴去酒店休息。大概预计休息到凌晨一点多，她们再去机场登机。到现在已经非常折腾了，但是至少能出发，兰和大多数旅客还能接受这样的安排。此时我也已经在地铁上了，前往上海浦东机场附近的酒店，准备等兰飞机到了去接机。只是她到达上海预计已经四点多了，她到酒店时候也差不多五点多了，十二点退房，她还能睡一会儿。但是，只能说，后面发展还是出乎我们的意料。
-			</p>
-			<h3 id="e463204b-b5c2-4b2c-a885-12da120d1197" class="">第四折：航班取消？</h3>
-			<p id="f09f1041-1178-41b8-9340-812bd32fee48" class="">
-				接近凌晨一点时候，休息了不到两个小时的兰和其他旅客出发去机场。一点半，安检完，在机场等待的他们接到通知说飞机取消了。这一刻每个人的心情都是崩溃的，我在和兰的视频通话中听到许多乘客在和机场工作人员争执，这种事情放在每个人身上都无法接受，既然航班取消，那为什么还要把乘客从酒店喊起来，现在已经是接近凌晨两点了，难道还要再坐半小时车回酒店？如此折腾下来，每个人都很气愤，都很困惑，也都很疲倦。最后经过一段时间争执，东方航空承诺早上七点时候起飞。但这也意味这剩下的接近五个小时，兰要坐在机场等待。远在上海的我看着兰一路上经历过的波折，心痛难过，但我能做只是不断的帮她查一些航班和天气信息，只能视频陪陪她，陪她聊到五点，聊天时她语气已经有些暴躁了，毕竟经历那么多令人糟心的事情。五点到六点她在机场眯了会儿，六点半登机。
-			</p>
-			<h3 id="9a912272-ec09-43af-bc13-8ca25803fdb8" class="">终于见面</h3>
-			<p id="fbec7dfe-343c-4d18-901a-be43eaf8b1c0" class="">七点钟她发图片给我看，贵阳的天气已经转晴了。</p>
-			<figure id="52923a1e-2a13-4832-b8d1-5d9864f54619" class="image"><a href="https://sm.ms/image/oran3KS1ARThZdt" target="_blank"><img src="https://s2.loli.net/2024/05/25/oran3KS1ARThZdt.jpg" ></a>			</figure>
-			<p id="5f4e9740-b067-4ced-b54c-078cbfa4fc48" class="">
-				到飞机上后她也可以再眯一会儿，但想来在飞机上睡觉也是会很不舒服的。飞机预计早上九点半到达，我八点五十出发去机场，终于在4月30日10：00，我们终于见面了。</p>
-			<figure id="cb43c703-f0b3-4e17-a7a2-f51bc4b9dc96" class="image"><a href="https://sm.ms/image/K5sOXr2dVQC1hN7" target="_blank"><img src="https://s2.loli.net/2024/05/25/K5sOXr2dVQC1hN7.jpg" ></a>			</figure>
-			<p id="fb3bbdbe-2ecb-402f-9850-49d978a332fb" class="">
-			</p>
-		</div>
-	</article><span class="sans" style="font-size:14px;padding-top:2em"></span>
-</body>
-
-</html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>2024年五一旅游记录</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="e9192a6e-0827-44bd-89bd-82e3a819e453" class="page sans"><header><img class="page-cover-image" src="https://www.notion.so/images/page-cover/gradients_11.jpg" style="object-position:center 40%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">🗼</span></div><h1 class="page-title">2024年五一旅游记录</h1><p class="page-description"></p></header><div class="page-body"><h2 id="7a652dbd-1317-45fa-b918-b5a17ae15ee3" class="">1 波折的启程</h2><hr id="abe9b076-6d46-43a2-8722-b9fc5113f55f"/><p id="09e5c314-bcd5-476d-b220-31abee5a0d27" class="">今年五一计划是和兰一块去找个游游逛逛，但是去哪玩一直没定好。因为我在上海，兰在兴义，五一假期只有五天，我们不希望在出行上花费太多时间，多留些时间去玩。出于这个原因，我们排除了重庆，北海这些地方。后面兰跟我说，五一期间恰逢黔西南州州庆，所以她们可以多两天假期，她可以</p><p id="52719e2d-d752-43a6-b764-2c07e2a96680" class="">29号下班之后出发，6号回去。于是我们决定还是来上海玩，这样可以在上海周边玩五天。去年国庆期间我们已经逛了上海的一些地方了，这次打算玩的轻松一些，随便逛逛吃吃，不要玩的太累，享受下慢悠悠的生活节奏。</p><p id="32527735-5bc9-44d9-9cb6-b057a21afeeb" class="">理想是丰满的，现实往往则充满波折。时间来到四月二十九号，兴义没雨但风却不太平静，天气预报中南方大部有雨。长沙下了一天暴雨以至于南站甚至都漏雨了。只是29号早上的我们还没有意识到这会给启程带来什么意外。</p><figure id="743ba7e1-4712-433a-9166-bb102e171ce1" class="image"><a href="https://s2.loli.net/2024/05/25/soQvmF1CyrU4Gik.jpg"><img style="width:863px" src="https://s2.loli.net/2024/05/25/soQvmF1CyrU4Gik.jpg"/></a><figcaption>4.30号的降水图</figcaption></figure><p id="a5903518-503b-4376-b338-d4e8ab8999f7" class="">按照我们的计划，29号周一，兰下午三点十分下课之后，打车去兴义万峰林的机场赶17：35-18：30的飞机，然后坐20：30-23：05的飞机。</p><h3 id="ea69f1a8-a3ed-4f78-a7be-a5994f398f6a" class="">第一折：突然的延误</h3><p id="0576be90-f7e0-4c97-9983-e6c57ccc3ff4" class="">但是29号11：20，兰突然收到短信通知，她的航班变动到了20：00-20：55。</p><figure id="7a9cc6ef-3413-4775-babe-994f56baf8aa" class="image"><a href="https://s2.loli.net/2024/05/25/UG4tzulbdJqvDkE.jpg"><img style="width:708px" src="https://s2.loli.net/2024/05/25/UG4tzulbdJqvDkE.jpg"/></a></figure><p id="de8b9892-4b05-42a8-ba63-f77d47d60248" class="">按照这个时间，肯定无法赶上20：30贵阳飞往上海的飞机。于是兰赶快退了这趟晚点的飞机，转订了15：00的兴义飞贵阳的飞机。但是这样她就没法上下午的那节课了，没办法，她只好找了同事帮忙代一节课，然后下午两点出发去机场。但是事情会那么轻松解决么？</p><h3 id="ba8214f8-15f3-473b-9e7e-ff9df9f611da" class="">第二折：不确定的起飞时间</h3><p id="e591351f-d3ba-4d10-9f46-a93d03577f9c" class="">15：20登机，但是在机场等待的兰迟迟没听到广播，我让她去看看电子屏看看有没有延误的通知。结果她发现了这个：</p><figure id="1c05b22c-4834-49e9-8db9-f2fe21998737" class="image"><a href="https://s2.loli.net/2024/05/25/sQZKTg8w6xRqzWp.jpg"><img style="width:450px" src="https://s2.loli.net/2024/05/25/sQZKTg8w6xRqzWp.jpg"/></a></figure><p id="a5d93df0-63dd-4ffa-ada8-33ed6eae8488" class="">且不说这个展板在2024年的机场显得有些太不专业了，起飞时间待定，无疑对于要赶下一趟飞机的人来说是一记痛击。时间已经到了下午四点，继续等待充满了太多不确定性。兰决定不坐飞机去贵阳了，转坐顺风车去，理论上说，四点出发，考虑到接人送人，八点之前到贵阳机场时间上是紧迫的。但是小兰提醒我，小罗和小曹他们此时应该也出发了，让我去问问他们什么情况了。询问过后，发现由于贵阳天气也很恶劣，暴雨不断，大部分飞机都延误了。也就是说如果顺风车开的快一些的话，还是有机会赶上延误的飞机的，这是唯一的好消息了。但是后面的经历显示，把这当成好消息还是太乐观了。</p><h3 id="4cdada4d-7c24-4c72-bc2a-afde3e4cc9ce" class="">第三折：延误的飞机与缓慢的顺风车</h3><p id="10fd8ed2-d4c9-42e5-bf5b-a34452acffc9" class="">正常来说，从兴义到贵阳顺风车，最多四小时就能到。但是实际上这辆车四点出发，直到九点半才到机场。好在飞机延误了，原定八点半起飞的飞机，到十点都还没有开始检票。后来机场工作人员告诉乘客，这辆飞机延误到凌晨两点，让旅客们先去酒店休息。时间到十点半，兰坐机场提供的大巴去酒店休息。大概预计休息到凌晨一点多，她们再去机场登机。到现在已经非常折腾了，但是至少能出发，兰和大多数旅客还能接受这样的安排。此时我也已经在地铁上了，前往上海浦东机场附近的酒店，准备等兰飞机到了去接机。只是她到达上海预计已经四点多了，她到酒店时候也差不多五点多了，十二点退房，她还能睡一会儿。但是，只能说，后面发展还是出乎我们的意料。</p><h3 id="e463204b-b5c2-4b2c-a885-12da120d1197" class="">第四折：航班取消？</h3><p id="f09f1041-1178-41b8-9340-812bd32fee48" class="">接近凌晨一点时候，休息了不到两个小时的兰和其他旅客出发去机场。一点半，安检完，在机场等待的他们接到通知说飞机取消了。这一刻每个人的心情都是崩溃的，我在和兰的视频通话中听到许多乘客在和机场工作人员争执，这种事情放在每个人身上都无法接受，既然航班取消，那为什么还要把乘客从酒店喊起来，现在已经是接近凌晨两点了，难道还要再坐半小时车回酒店？如此折腾下来，每个人都很气愤，都很困惑，也都很疲倦。最后经过一段时间争执，东方航空承诺早上七点时候起飞。但这也意味这剩下的接近五个小时，兰要坐在机场等待。远在上海的我看着兰一路上经历过的波折，心痛难过，但我能做只是不断的帮她查一些航班和天气信息，只能视频陪陪她，陪她聊到五点，聊天时她语气已经有些暴躁了，毕竟经历那么多令人糟心的事情。五点到六点她在机场眯了会儿，六点半登机。</p><h3 id="9a912272-ec09-43af-bc13-8ca25803fdb8" class="">终于见面</h3><p id="fbec7dfe-343c-4d18-901a-be43eaf8b1c0" class="">七点钟她发图片给我看，贵阳的天气已经转晴了。</p><figure id="52923a1e-2a13-4832-b8d1-5d9864f54619" class="image"><a href="https://s2.loli.net/2024/05/25/oran3KS1ARThZdt.jpg"><img style="width:1279px" src="https://s2.loli.net/2024/05/25/oran3KS1ARThZdt.jpg"/></a></figure><p id="5f4e9740-b067-4ced-b54c-078cbfa4fc48" class="">到飞机上后她也可以再眯一会儿，但想来在飞机上睡觉也是会很不舒服的。飞机预计早上九点半到达，我八点五十出发去机场，终于在4月30日10：00，我们终于见面了。</p><figure id="cb43c703-f0b3-4e17-a7a2-f51bc4b9dc96" class="image"><a href="https://s2.loli.net/2024/05/25/K5sOXr2dVQC1hN7.jpg"><img style="width:1280px" src="https://s2.loli.net/2024/05/25/K5sOXr2dVQC1hN7.jpg"/></a></figure><p id="c4cb4820-1ea1-43cb-9773-85e74c0f1f2d" class="">
+</p><p id="b0767849-943b-4c3c-9f72-2e0c9a3efbaf" class="">
+</p><h2 id="f88bf640-8055-46c1-b272-a3bb91774b98" class="">4.30 校园，海底捞</h2><hr id="6c0075bd-4241-4481-ba1b-274827e13d38"/><p id="28117655-f8ab-4797-be05-cba64ea4df35" class="">30号的上海还有些淅淅沥沥的小雨，好在天气预报告诉我们后面几天都是晴天，似乎预示着经过了艰难波折的相遇之后，我们可以开始享受我们轻松惬意的旅行了。</p><figure id="d35e9acc-a9e5-4f8b-bb48-ceaa023bf7db" class="image"><a href="https://s2.loli.net/2024/05/25/NrmPOBnIeg63sHt.png"><img style="width:1290px" src="https://s2.loli.net/2024/05/25/NrmPOBnIeg63sHt.png"/></a><figcaption>30号周二查看的天气预报</figcaption></figure><p id="38a6a301-49f7-4315-a204-6d8c0f368fe5" class="">
+</p><p id="034a3fee-0ac7-4ff7-b3d7-69553aa46062" class="">中午从酒店出来后，因为我还没放假，下午三点有一门课担任助教，必须要参加，此外晚上还有一门课。下午三点的课是中华文明通论，有时候老师会讲一些历史故事，还是很有趣味性的，兰想着来陪我听听故事，我们就直接从机场附近的酒店来学校了。到学校大概一点左右，刚好带兰去我们学校食堂品尝下我觉得学校食堂最好吃的一个窗口——麻辣香锅和冒菜（兰称之为麻辣烫）。我们两个都点了，值得一提的是，在此之前，我只在这个窗口点过香锅，从来没吃过麻辣烫，我下意识的以为这个麻辣烫会不符合我的胃口，结果在兰点了麻辣烫之后我发现意外的好吃，解锁一个新美食。兰告诉我，她已经好久没吃过麻辣烫了，因为她总感觉外面的麻辣烫不干净。但是学校食堂的饭菜应该还是比较卫生的，至少我吃了一个多学期，没遇到什么意外情况。但是这里留下了一个伏笔。</p><p id="307b3701-4b0a-4f3c-9b6e-24a2950c6021" class="">
+</p><p id="8757abbb-b3b8-4934-a178-eb4b3a1dd889" class="">吃饱饱后，其实是吃撑了之后。我们在食堂坐着聊聊天，等待三点去上课。我们期待能听一些好玩的故事，遗憾的是，我们到达教室后，发现这节课的趣味性不是那么强，加上兰本来也没睡多久，虽然她嘴上说自己不困，但慢慢听着听着就困了，趴在桌子上睡觉。真的是辛苦她了。下午的课五点四十结束后，因为中午吃的挺多的，到现在我俩都还不饿，就去上晚上的课去了，下午的课睡了会儿后，晚上的她显得精神多了，陪我听了三节课，她听不懂，但是她在很耐心的在陪伴着我。我们享受着少有的我俩在一间教室一块听课的珍惜时光。</p><figure id="ea875270-1f87-420f-adf7-37c7fe1f8888" class="image"><a href="https://s2.loli.net/2024/05/25/i8ygHNtXoRLdknA.jpg"><img style="width:1109px" src="https://s2.loli.net/2024/05/25/i8ygHNtXoRLdknA.jpg"/></a><figcaption>我们一起听的两节课</figcaption></figure><p id="bb272973-9d61-4e69-b846-0f96772d5584" class="">
+</p><p id="1943a245-b585-4c15-810e-c84169522bce" class="">下课之后，我们的假期就正式开始了。我先会寝室把行李带上，顺便给兰带了一件我的外套穿，因为兴义这些天比较热，而今天上海温度只有十几度，她穿的衣服会有些冷。不过好在她还是带来长裤的，穿上我的外套就不算太冷了。我听小罗说，他和小曹只带了短袖短裤就跑去义务了，冷的都不能出门。离开学校后，我们出发去酒店，坐地铁去长寿路地铁站，然后步行去酒店。路上我们商量着去吃顿海底捞，好久没吃火锅了，还挺想吃的，这个点刚好可以用学生6.6折优惠。下地铁后，我们发现地铁站门口居然就有一家海底捞，离我们的酒店也只有一百多米，非常的nice。把行李放到酒店后，歇息了一会儿我们就冲冲去吃海底捞了，路上还看到了一家雪王，顺便带两杯，美滋滋。</p><p id="94d8a2f4-73a3-4156-af58-9f5fca54f718" class="">
+</p><figure id="b71519d5-a972-4462-803e-0a4486b08d2e" class="image"><a href="https://s2.loli.net/2024/05/25/xb15EuNSJ38qfIK.jpg"><img style="width:708px" src="https://s2.loli.net/2024/05/25/xb15EuNSJ38qfIK.jpg"/></a></figure><p id="3b999d85-aa83-4f34-91e1-a451a72285ea" class=""><br/>吃完海底捞回到酒店已经一点多了。昨天没怎么休息，今天终于可以睡一个好觉了。希望明天更精彩。<br/></p><p id="d570c6a4-46e0-416c-8fb3-9851dce561c4" class="">
+</p><h2 id="e21b0d87-353c-4a1e-a304-0c043a1905f4" class="">5.1 麻辣烫，静安寺，外滩，豫园</h2><hr id="35d65777-ddc7-4d4c-8381-ebc6b04e76f9"/><p id="ae7dfc99-a494-4508-962e-34260d63c469" class="">饱饱的睡了一觉之后，一点过我们才从酒店出发。因为昨天在学校吃了麻辣烫，味道还不错。酒店楼下刚好有一家张亮麻辣烫，我们就又去吃麻辣烫。顺便在隔壁的咖啡小店买了两杯咖啡，这是一家紫色为主色调的咖啡店，名字叫做HANA coffee，老板的造型很fashion，不知道以后还没有机会喝他家的咖啡。我不常喝咖啡，所以也没品尝来个1234，但是感觉上是挺ok的。回到麻辣烫，我们吃的过程中发现一个小问题，我觉得这个麻辣烫它有点辣，但是兰觉得不辣。我之前在兴义明明那么能吃辣的，在上海呆久了，反而变得不能吃辣了。于是乎，我让兰回兴义以后给我寄一点辣椒来，我平时也吃一点辣椒，省的后面回兴义了啥都觉得辣。</p><figure id="9cbd0d6b-d3f7-465c-925a-0dad3dc67daf" class="image" style="text-align:center"><a href="https://s2.loli.net/2024/05/25/tn5wWLAdJKXIGDx.jpg"><img src="https://s2.loli.net/2024/05/25/tn5wWLAdJKXIGDx.jpg"/></a><figcaption>小兰回兴义之后寄给我的她妈妈自己榨的辣椒，非常辣，非常香。现在我每次吃饭都要放一些。</figcaption></figure></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
